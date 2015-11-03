@@ -1,1 +1,1 @@
-# Introduction to plotting in R with ggplot
+# Plotting in R with ggplot
