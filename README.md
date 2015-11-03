@@ -25,10 +25,25 @@ You only need to install it once. But you need to activate it whenever you start
 2. Reshape data
 3. Plot data
 
-## Resources
-[ggplot Cookbook](http://www.cookbook-r.com/)
+### Example 1
+`...`
 
-[ggplot cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+## Resources
+(Subjective selection)
+
+If I get stuck with a ggplot problem, I often just use google. Usually very efficient; leads you often to helpful answers on stackoverflow ([example](http://stackoverflow.com/questions/15251816/how-do-you-order-the-fill-colours-within-ggplot2-geom-bar))).
+
+[ggplot cookbook](http://www.cookbook-r.com/Graphs/)
+
+[ggplot docs](http://docs.ggplot2.org/current/)
+
+[ggplot cheat sheet (long)](http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+
+[ggplot cheat sheet (short)](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
+[ggplot examples](http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/ggplot2.html)
+
+[ggplot github wiki](https://github.com/hadley/ggplot2/wiki)
 
 ## Live coding during the workshop
 
