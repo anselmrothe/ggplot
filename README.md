@@ -43,8 +43,6 @@ If I get stuck with a ggplot problem, I often just use google (for example "ggpl
 
 [ggplot examples](http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/ggplot2.html)
 
-[ggplot github wiki](https://github.com/hadley/ggplot2/wiki)
-
 ## Live coding during the workshop
 
 View here: https://www.getdatajoy.com/project/56390383649632dd2e9abbad
