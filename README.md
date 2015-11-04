@@ -31,7 +31,7 @@ You only need to install it once. But you need to activate it whenever you start
 ## Resources
 (Subjective selection)
 
-If I get stuck with a ggplot problem, I often just use google. Usually very efficient; leads you often to helpful answers on stackoverflow ([example](http://stackoverflow.com/questions/15251816/how-do-you-order-the-fill-colours-within-ggplot2-geom-bar)).
+If I get stuck with a ggplot problem, I often just use google (for example "ggplot change order of colors"). Usually very efficient; leads you often to helpful answers on stackoverflow ([example](http://stackoverflow.com/questions/15251816/how-do-you-order-the-fill-colours-within-ggplot2-geom-bar)).
 
 [ggplot cookbook](http://www.cookbook-r.com/Graphs/)
 
