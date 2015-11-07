@@ -43,6 +43,8 @@ If I get stuck with a ggplot problem, I often just use google (for example "ggpl
 
 [ggplot examples](http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/ggplot2.html)
 
+[ggplot examples 2](http://shiny.stat.ubc.ca/r-graph-catalog/)
+
 ### Advanced
 
 [ggplot extensions](http://yutannihilation.github.io/allYourFigureAreBelongToUs)
