@@ -33,6 +33,9 @@ x %>% exp %>% mean %>% sum %>% sqrt
 ### I want only columns A and B
 `x %>% select(A, B)` (which is the same as `select(x, A, B)`)
 
+### I want to drop columns G and H
+`x %>% select(-G, -H)`
+
 ### I want only rows where values in column A are larger than 3
 `x %>% filter(A > 3)`
 
@@ -41,6 +44,10 @@ x %>% exp %>% mean %>% sum %>% sqrt
 ## dplyr advanced
 
 `...`
+
+- `group_by`
+- `summarize`
+- `mutate`
 
 [dplyr Introduction](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) (advanced)
 
