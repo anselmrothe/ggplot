@@ -31,7 +31,7 @@ ggplot(df, aes(x, y)) + geom_point() # scatterplot
 3. Plot data
 
 ### Full cycle example
-[Extra page](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/fullcycle.html)
+[Extra page](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
 
 ## Resources
 (Subjective selection)
