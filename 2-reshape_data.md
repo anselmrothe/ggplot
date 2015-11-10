@@ -30,10 +30,18 @@ x %>% exp %>% mean %>% sum %>% sqrt
 
 ## dplyr beginner
 
-### select()
-I want column `
+### I want only columns A and B
+`x %>% select(A, B)` (which is the same as `select(x, A, B)`)
+
+### I want only rows where values in column A are larger than 3
+`x %>% filter(A > 3)`
+
+`...`
 
 ## dplyr advanced
+
+`...`
+
 
 # Package tidyr()
 [tidyr Introduction](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) (focus on the `gather()` function, that's what you want)
