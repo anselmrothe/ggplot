@@ -22,10 +22,10 @@ You only need to install it once. But you need to activate it whenever you start
 
 ## Full cycle
 1. Load data
-2. Reshape data
+2. [Reshape data](2-reshape_data.md)
 3. Plot data
 
-### Example 1
+### Example
 `...`
 
 ## Resources
