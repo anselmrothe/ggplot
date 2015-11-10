@@ -5,7 +5,7 @@ In general, but especially if you use ggplot, you use data frames for your data.
 I see two levels of expertise with dplyr, but before we start let me mention this thing: `%>%`
 This is a special operater that makes it a lot easier to write and read your R code.
 
-```
+```r
 ## A note about the 'pipe' operator %>% from the dplyr package
 library(dplyr)
 
