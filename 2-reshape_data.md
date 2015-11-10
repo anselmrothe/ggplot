@@ -29,6 +29,7 @@ x %>% exp %>% mean %>% sum %>% sqrt
 ```
 
 ## dplyr beginner
+*Assume `x` is a data frame with some rows and columns.*
 
 ### I want only columns A and B
 `x %>% select(A, B)` (which is the same as `select(x, A, B)`)
