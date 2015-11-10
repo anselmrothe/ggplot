@@ -42,6 +42,7 @@ x %>% exp %>% mean %>% sum %>% sqrt
 
 `...`
 
+[dplyr Introduction](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) (advanced)
 
 # Package tidyr()
 [tidyr Introduction](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) (focus on the `gather()` function, that's what you want)
