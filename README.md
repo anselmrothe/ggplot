@@ -30,8 +30,8 @@ ggplot(df, aes(x, y)) + geom_point() # scatterplot
 2. Reshape data (see [additional page](2-reshape_data.md))
 3. Plot data
 
-### Example
-`...`
+### Full cycle example
+[Extra page](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/fullcycle.html)
 
 ## Resources
 (Subjective selection)
