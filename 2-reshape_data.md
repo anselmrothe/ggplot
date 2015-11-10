@@ -1,9 +1,9 @@
 
 # Package dplyr()
-Awesome package to work with data frames in R.
-If you use ggplot, you (have to / want to) use data frames for your data.
+Awesome package to work with *data frames* in R.
+In general, but especially if you use ggplot, you use data frames for your data.
 I see two levels of expertise with dplyr, but before we start let me mention this thing: `%>%`
-This is a special operater that makes it a lot easier to write and read your R code (you don't *have* to use it).
+This is a special operater that makes it a lot easier to write and read your R code.
 
 ```
 ## A note about the 'pipe' operator %>% from the dplyr package
