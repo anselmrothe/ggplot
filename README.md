@@ -1,5 +1,7 @@
 # Plotting in R with ggplot
 
+*This material is for my fellow PhD students who work with data every day but haven't made the big step to ggplot yet.*
+
 ## Getting started
 
 ### I haven't used R yet. How do I start?
@@ -14,9 +16,9 @@ You only need to install it once. But you need to activate it whenever you start
 
 `library(ggplot2)`
 
-## Simple examples
+## Examples
 
-### Most simple
+### 1 Most simple example
 
 ```r
 x <- c(1, 2, 5, 1, 7, 3, 2, 4, 5, 7, 0, 3, 1)
@@ -24,14 +26,22 @@ y <- c(0, 4, 7, 4, 8, 2, 6, 3, 5, 4, 2, 7, 1)
 df <- data.frame(x, y) # ggplot needs data in data frame format
 ggplot(df, aes(x, y)) + geom_point() # scatterplot
 ```
+### 2 Commute data set example
 
-## Full cycle
+See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/commute.html).
+We will go through this example step by step.
+It's going to be fun!
+
+### 3 Full cycle example
+
+Full cycle:
 1. Load data
 2. Reshape data (see [additional page](2-reshape_data.md))
 3. Plot data
 
-### Full cycle example
-[Extra page](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
+[Full cycle example](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
+
+### 
 
 ## Resources
 (Subjective selection)
