@@ -36,11 +36,12 @@ It's going to be fun!
 ### 3 Full cycle example
 
 Full cycle:
+
 1. Load data
 2. Reshape data (see [additional page](2-reshape_data.md))
 3. Plot data
 
-[Full cycle example](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
+See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
 
 ### 
 
