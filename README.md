@@ -21,6 +21,7 @@ You only need to install it once. But you need to activate it whenever you start
 ### 1 Most simple example
 
 ```r
+library(ggplot2)
 x <- c(1, 2, 5, 1, 7, 3, 2, 4, 5, 7, 0, 3, 1)
 y <- c(0, 4, 7, 4, 8, 2, 6, 3, 5, 4, 2, 7, 1)
 df <- data.frame(x, y) # ggplot needs data in data frame format
