@@ -38,7 +38,7 @@ It's going to be fun!
 Full cycle:
 
 1. Load data
-2. Reshape data (see [additional page](2-reshape_data.md))
+2. Reshape data
 3. Plot data
 
 See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
