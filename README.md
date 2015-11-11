@@ -43,6 +43,8 @@ Full cycle:
 
 See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
 
+*I'm thinking about setting up a better example because in this one the data set is already in the format required for ggplot... You can find see some commands for working with a data frame in this example here though.*
+
 ### 
 
 ## Resources
