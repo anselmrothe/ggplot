@@ -8,8 +8,8 @@ Install RStudio (about 1 minute): [download here](https://rstudio.com/products/r
 
 Install ggplot (about 1.5 minutes):
 - open RStudio
-- type into the console in RStudio: `install.packages('tidyverse')` and hit `enter`
-- If it asks "Do you want to install from sources the packages which need compilation?" type `no` and hit `enter`
+- type into the console in RStudio: `install.packages('tidyverse')` and hit enter
+- If it asks "Do you want to install from sources the packages which need compilation?" type `no` and hit enter
 
 ## Examples
 
