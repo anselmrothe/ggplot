@@ -24,7 +24,7 @@ ggplot(df, aes(x, y)) + geom_point() # scatterplot
 ```
 ### 2 Commute data set example
 
-See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/commute.html).
+See [here](https://github.com/anselmrothe/ggplot/blob/master/commute.md).
 We will go through this example step by step.
 It's going to be fun!
 
