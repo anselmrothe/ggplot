@@ -9,12 +9,11 @@ took me to commute (door to door).
 
 1)  Start RStudio.
 
-2)  Create a new project (File \(\rightarrow\) New Project…
-    \(\rightarrow\) New Directory \(\rightarrow\) New Project).
+2)  Create a new project (File → New Project… → New Directory → New
+    Project).
 
-3)  Begin a new R Notebook (File \(\rightarrow\) New File
-    \(\rightarrow\) R Notebook) and save it in the same folder where you
-    saved your new project.
+3)  Begin a new R Notebook (File → New File → R Notebook) and save it in
+    the same folder where you saved your new project.
 
 4)  Download my data set in form of [this csv
     file](https://github.com/anselmrothe/ggplot/blob/master/data/commute.csv)
