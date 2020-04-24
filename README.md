@@ -1,30 +1,25 @@
-# Plotting in R with ggplot
-
-*This material is for my fellow PhD students who work with data every day but haven't made the big step to ggplot yet.*
+# Plotting your data with ggplot in R
 
 ## Getting started
 
-### I haven't used R yet. How do I start?
-To program in R, I like to work with [RStudio](https://www.rstudio.com/products/RStudio/).
+Install R (about 1 minute): [download here](https://cloud.r-project.org/)
 
-### Ok, I installed RStudio. How can I use ggplot?
-Install it by executing this line in RStudio (yes, it's actually ggplot2 we are talking about, the original ggplot is outdated):
+Install RStudio (about 1 minute): [download here](https://rstudio.com/products/rstudio/download/#download)
 
-`install.packages("ggplot2")`
-
-You only need to install it once. But you need to activate it whenever you start a session with this:
-
-`library(ggplot2)`
+Install ggplot (about 1.5 minutes):
+- open RStudio
+- type into the console in RStudio: `install.packages('tidyverse')` and hit `enter`
+- If it asks "Do you want to install from sources the packages which need compilation?" type `no` and hit `enter`
 
 ## Examples
 
 ### 1 Most simple example
 
 ```r
-library(ggplot2)
+library(tidyverse)
 x <- c(1, 2, 5, 1, 7, 3, 2, 4, 5, 7, 0, 3, 1)
 y <- c(0, 4, 7, 4, 8, 2, 6, 3, 5, 4, 2, 7, 1)
-df <- data.frame(x, y) # ggplot needs data in data frame format
+df <- tibble(x, y) # ggplot needs data in data frame format
 ggplot(df, aes(x, y)) + geom_point() # scatterplot
 ```
 ### 2 Commute data set example
@@ -35,35 +30,33 @@ It's going to be fun!
 
 ### 3 Full cycle example
 
+*This example doesn't exist yet -- Getting the data into the right shape for plotting is a skill on its own, so this could become the content of for a future workshop.*
+
 Full cycle:
 
 1. Load data
 2. Reshape data
 3. Plot data
 
-See [here](http://htmlpreview.github.io/?https://github.com/anselmrothe/ggplot/blob/master/html/fullcycle.html)
-
-*I'm thinking about setting up a better example because in this one the data set is already in the format required for ggplot... You can see some commands for working with a data frame in this example here though.*
-
-### 
+###
 
 ## Resources
 (Subjective selection)
 
-If I get stuck with a ggplot problem, I often just use google (for example "ggplot change order of colors"). Usually very efficient; leads you often to helpful answers on stackoverflow ([example](http://stackoverflow.com/questions/15251816/how-do-you-order-the-fill-colours-within-ggplot2-geom-bar)).
+If I get stuck with a ggplot problem, I often just use google (for example "ggplot change order of colors"). Usually very efficient; leads you often to helpful answers on stackoverflow ([example](https://stackoverflow.com/questions/3777174/plotting-two-variables-as-lines-using-ggplot2-on-the-same-graph/)).
 
-[ggplot cookbook](http://www.cookbook-r.com/Graphs/)
+[ggplot cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
 
-[ggplot docs](http://docs.ggplot2.org/current/)
+[introduction to ggplot by the master himself](https://r4ds.had.co.nz/data-visualisation.html)
 
-[ggplot cheat sheet (long)](http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+[another comprehensive introduction](https://r-graphics.org/index.html)
 
-[ggplot cheat sheet (short)](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+[examples with code (1)](http://www.sthda.com/english/wiki/be-awesome-in-ggplot2-a-practical-guide-to-be-highly-effective-r-software-and-data-visualization)
 
-[ggplot examples](http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/ggplot2.html)
+[examples with code (2)](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
 
-[ggplot examples 2](http://shiny.stat.ubc.ca/r-graph-catalog/)
+[ggplot main page](https://ggplot2.tidyverse.org/)
 
-### Advanced
+[bad plots](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/)
 
-[ggplot extensions](http://yutannihilation.github.io/allYourFigureAreBelongToUs)
+
