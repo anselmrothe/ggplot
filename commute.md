@@ -73,21 +73,8 @@ dd %>% ggplot(aes(date, minutes)) + geom_point()
 
 ![](commute_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-Wait, I didn’t record the time every day and sometimes twice (both
-directions). The x-axis should reflect that. We change the type of the
-`date` column to ‘Date’.
-
-``` r
-dd$date <- as.Date(dd$date)
-```
-
-``` r
-dd %>% ggplot(aes(date, minutes)) + geom_point()
-```
-
-![](commute_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
-
-Much nicer.
+(If the x-axis doesn’t look like this, try `dd$date <- as.Date(dd$date)`
+to change the type of the `date` column, then plot again.)
 
 What does the distribution of commute times look like? Let’s make a
 histogram.
@@ -98,7 +85,7 @@ dd %>% ggplot(aes(minutes)) + geom_histogram()
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](commute_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 We notice the binwidth message. Let’s set the binwidth to 1 minute.
 
@@ -106,7 +93,7 @@ We notice the binwidth message. Let’s set the binwidth to 1 minute.
 dd %>% ggplot(aes(minutes)) + geom_histogram(binwidth = 1)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 -----
 
@@ -119,7 +106,7 @@ histogram based on the `by` column.
 dd %>% ggplot(aes(minutes, fill = by)) + geom_histogram(binwidth = 1)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Do you see how the blue-ish bars “bump up” the red bars (e.g., around 50
 minutes)? There are two ways to get rid of that.
@@ -133,7 +120,7 @@ other
 dd %>% ggplot(aes(minutes, fill = by)) + geom_histogram(binwidth = 1, position = "dodge")
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-10-1.png)<!-- --> That’s not
+![](commute_files/figure-gfm/unnamed-chunk-8-1.png)<!-- --> That’s not
 good here because now the blue-ish metro bars are to the right of the
 red bike bars, so if we want to say which one is faster we just
 introduced a bias in favor of bike (by moving those bars to the left).
@@ -147,7 +134,7 @@ histograms
 dd %>% ggplot(aes(minutes)) + geom_histogram(binwidth = 1) + facet_grid(~by)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 Wow, that is simple\! I really like the `facet_grid` command. Note that
 both histograms use the same scales, that makes it good for comparison.
@@ -161,7 +148,7 @@ believe).
 dd %>% ggplot(aes(minutes)) + geom_histogram(binwidth = 1) + facet_grid(by~.)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Perfect\!
 
@@ -193,7 +180,7 @@ The `.` becomes
 dd %>% ggplot(aes(minutes)) + geom_histogram(binwidth = 1) + facet_grid(by ~ direction)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 Interesting. The slow train rides where always from work to home (i.e.,
 at night) while the really fast rides where from home to work (i.e.,
@@ -206,7 +193,7 @@ before?
 dd %>% ggplot(aes(minutes)) + geom_histogram(binwidth = 1) + facet_grid(by + direction ~ .)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 I like that. With this layout, I feel so much faster to “see the story”
 of these data points.
@@ -218,7 +205,7 @@ colors.
 dd %>% ggplot(aes(minutes, fill = direction)) + geom_histogram(binwidth = 1) + facet_grid(by + direction ~ .)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Let’s help the eye with some nicer
 colors.
@@ -228,7 +215,7 @@ dd %>% ggplot(aes(minutes, fill = direction)) + geom_histogram(binwidth = 1) + f
   scale_fill_brewer(palette = "Set1")
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 -----
 
@@ -244,7 +231,7 @@ Let’s repeat the plot from the beginning
 dd %>% ggplot(aes(date, minutes)) + geom_point()
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 In this plot I notice two things
 
@@ -258,7 +245,7 @@ To visualize \#1 we can just make another histogram.
 dd %>% ggplot(aes(date)) + geom_histogram(binwidth = 14)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 I played with the width of the bins, and chose 2 weeks = 14 days. Ok,
 seems there was a time when I was most motivated to record my commutes.
@@ -270,7 +257,7 @@ trend over time?), let’s try to add a line.
 dd %>% ggplot(aes(date, minutes)) + geom_point() + geom_line()
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 Hm, this connected the points with a line (definitely useful in other
 cases) but here we want something like an average line.
@@ -281,7 +268,7 @@ dd %>% ggplot(aes(date, minutes)) + geom_point() + geom_smooth()
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
-![](commute_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 Great\! This suggests that my commuting times where stable until October
 and then got really worse. But careful, this line is already an
@@ -306,7 +293,7 @@ property).
 dd %>% ggplot(aes(date, minutes, colour = by)) + geom_point() + geom_smooth(method = lm)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 Small change, big result\!
 
@@ -321,7 +308,7 @@ demonstration.
 dd %>% ggplot(aes(date, minutes, colour = by)) + geom_point() + geom_smooth(method = lm, se = FALSE)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 How about additionally splitting the data by `direction`? We could use
 the facets, as we did
@@ -332,7 +319,7 @@ dd %>% ggplot(aes(date, minutes, colour = by)) + geom_point() + geom_smooth(meth
   facet_grid(direction~.)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 If we want to have only one plot, we could, for each direction,
 
@@ -353,7 +340,7 @@ dd %>%
   geom_smooth(method = lm, se = FALSE)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
 2)  Give different styles to the lines
 
@@ -366,7 +353,7 @@ dd %>%
   geom_smooth(method = lm, se = FALSE)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 3)  Both
 
@@ -379,7 +366,7 @@ dd %>%
   geom_smooth(method = lm, se = FALSE)
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 Great, ggplot understands that `shape` belongs to the points and `lty`
 to the lines.
@@ -400,7 +387,7 @@ dd %>%
   scale_shape_manual(values = c(19, 1))
 ```
 
-![](commute_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](commute_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 *Let’s have another workshop sometime where I tell you about reshaping
 your data…*
