@@ -49,7 +49,9 @@ If I get stuck with a ggplot problem, I often just use google (for example "ggpl
 
 [introduction to ggplot by the master himself](https://r4ds.had.co.nz/data-visualisation.html)
 
-[another comprehensive introduction](https://r-graphics.org/index.html)
+[another comprehensive introduction (1)](https://rkabacoff.github.io/datavis/)
+
+[another comprehensive introduction (2)](https://r-graphics.org/index.html)
 
 [examples with code (1)](http://www.sthda.com/english/wiki/be-awesome-in-ggplot2-a-practical-guide-to-be-highly-effective-r-software-and-data-visualization)
 
